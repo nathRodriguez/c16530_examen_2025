@@ -1,6 +1,6 @@
-﻿namespace backend.Models
+﻿namespace backend.Domain
 {
-    public class BeverageModel : IProduct
+    public class BeverageModel : IProductModel
     {
         public required string ImageUrl { get; set; }
         public required string Name { get; set; }

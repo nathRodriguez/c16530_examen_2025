@@ -1,6 +1,6 @@
-﻿namespace backend.Models
+﻿namespace backend.Domain
 {
-    public interface IProduct
+    public interface IProductModel
     {
         string ImageUrl { get; set; }
         string Name { get; set; }

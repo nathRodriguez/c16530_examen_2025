@@ -1,3 +1,6 @@
+using backend.Application;
+using backend.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -16,6 +19,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddKeyedScoped<IBuyProductsCommand, BuyBeverageCommand>("beverage");
+builder.Services.AddKeyedScoped<IGetProductsQuery, GetBeveragesQuery>("beverage");
+builder.Services.AddKeyedSingleton<IVendingMachineRepository, BeverageMachineRepository>("beverage");
 
 var app = builder.Build();
 
