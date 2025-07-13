@@ -1,7 +1,5 @@
 # Examen final - Ingeniería de Software Ciclo I-2025
 
-**Implementación de una máquina expendedora de refrescos, desarrollada como parte del Examen Final.**
-
 **Estudiante:** Nathalia Rodríguez Alfaro - C16530
 
 # Sistema de Máquina Expendedora de Refrescos
