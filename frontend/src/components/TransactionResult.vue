@@ -16,9 +16,9 @@
           
           <div class="col-md-6">
             <h6><strong>Resumen de pago:</strong></h6>
-            <p class="mb-1">Total a pagar: ₡ {{ transactionResult.totalCost }} colones</p>
-            <p class="mb-1">Total pagado: ₡ {{ transactionResult.totalPayment }} colones</p>
-            <p class="mb-2">Su vuelto: ₡ {{ transactionResult.changeAmount }} colones</p>
+            <p class="mb-1">Total a pagar: ₡ {{ transactionResult.totalCost }}</p>
+            <p class="mb-1">Total pagado: ₡ {{ transactionResult.totalPayment }}</p>
+            <p class="mb-2">Su vuelto es de ₡ {{ transactionResult.changeAmount }}</p>
           </div>
         </div>
 
@@ -26,7 +26,7 @@
           <h6><strong>Desglose del vuelto:</strong></h6>
           <ul class="mb-0">
             <li v-for="item in transactionResult.changeBreakdown" :key="item.value">
-              {{ item.quantity }} moneda de {{ item.value }} colones
+              {{ item.quantity }} moneda(s) de {{ item.value }} colones
             </li>
           </ul>
         </div>

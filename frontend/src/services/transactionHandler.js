@@ -125,9 +125,9 @@ class TransactionHandler {
       icon: 'success',
       title: 'Compra realizada',
       html: `
-        <p><b>Total a pagar:</b> ₡${transactionResult.totalCost} colones</p>
-        <p><b>Total pagado:</b> ₡${transactionResult.totalPayment} colones</p>
-        <p><b>Su vuelto:</b> ₡${transactionResult.changeAmount} colones</p>
+        <p><b>Total a pagar:</b> ₡${transactionResult.totalCost}</p>
+        <p><b>Total pagado:</b> ₡${transactionResult.totalPayment}</p>
+        <p><b>Su vuelto es de</b> ₡${transactionResult.changeAmount}</p>
         ${productDetails}
         ${paymentDetails}
         ${changeDetails}
@@ -141,7 +141,7 @@ class TransactionHandler {
     return `<br><b>Dinero ingresado:</b><br>
       <ul style="text-align:left;display:inline-block;margin:0;padding-left:1.2em;">
         ${paymentBreakdown.map(payment => 
-          `<li>${payment.quantity} ${payment.value >= 1000 ? 'billete' : 'moneda'} de ${payment.value}</li>`
+          `<li>${payment.quantity} ${payment.value >= 1000 ? 'billete(s)' : 'moneda(s)'} de ${payment.value}</li>`
         ).join('')}
       </ul>`;
   }
@@ -152,7 +152,7 @@ class TransactionHandler {
     return `<br><b>Desglose del vuelto:</b><br>
       <ul style="text-align:left;display:inline-block;margin:0;padding-left:1.2em;">
         ${changeBreakdown.map(item => 
-          `<li>${item.quantity} moneda de ${item.value}</li>`
+          `<li>${item.quantity} moneda(s) de ${item.value}</li>`
         ).join('')}
       </ul>`;
   }
