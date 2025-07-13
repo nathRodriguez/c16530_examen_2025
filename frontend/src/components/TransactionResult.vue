@@ -18,7 +18,7 @@
             <h6><strong>Resumen de pago:</strong></h6>
             <p class="mb-1">Total a pagar: ₡ {{ transactionResult.totalCost }}</p>
             <p class="mb-1">Total pagado: ₡ {{ transactionResult.totalPayment }}</p>
-            <p class="mb-2">Su vuelto es de ₡ {{ transactionResult.changeAmount }}</p>
+            <p class="mb-2"><strong>Su vuelto es de: ₡ {{ transactionResult.changeAmount }}</strong></p>
           </div>
         </div>
 
